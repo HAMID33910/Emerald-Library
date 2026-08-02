@@ -1,0 +1,73 @@
+/* =============================================
+   EMERALD LIBRARY - custom styles
+   Palette: emerald, gold, cream & stone (no blue, no black)
+   ============================================= */
+
+body {
+  font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+/* ---- Toast animation ---- */
+.toast {
+  animation: toastIn .35s ease;
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Fade up on page load ---- */
+.fade-up {
+  animation: fadeUp .5s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Book cover placeholder gradient ---- */
+.book-cover {
+  background: linear-gradient(140deg, #0d9488 0%, #10b981 40%, #fbbf24 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.book-cover.book-cover-alt {
+  background: linear-gradient(140deg, #b45309 0%, #f59e0b 50%, #fde68a 100%);
+}
+.book-cover.book-cover-alt2 {
+  background: linear-gradient(140deg, #047857 0%, #34d399 50%, #ecfdf5 100%);
+}
+
+/* ---- Online reader ---- */
+.reader-prose p {
+  margin-bottom: 1.4rem;
+  line-height: 1.85;
+  font-size: 1.1rem;
+  color: #44403c;
+  text-align: justify;
+}
+.reader-sheet {
+  background: #fffcf5;
+  box-shadow: 0 20px 45px -15px rgba(68, 64, 60, .35);
+}
+
+/* ---- Custom scrollbar ---- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #f5f0e6; }
+::-webkit-scrollbar-thumb { background: #a8a29e; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #78716c; }
+
+/* ---- Hero decorative circles ---- */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: .25;
+  pointer-events: none;
+}
